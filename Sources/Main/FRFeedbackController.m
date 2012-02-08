@@ -34,6 +34,33 @@
 
 @implementation FRFeedbackController
 
+@synthesize headingField;
+@synthesize subheadingField;
+@synthesize messageLabel;
+@synthesize messageView;
+@synthesize emailLabel;
+@synthesize emailBox;
+@synthesize detailsButton;
+@synthesize detailsLabel;
+@synthesize sendDetailsCheckbox;
+@synthesize tabView;
+@synthesize tabSystem;
+@synthesize tabConsole;
+@synthesize tabCrash;
+@synthesize tabScript;
+@synthesize tabPreferences;
+@synthesize tabException;
+@synthesize systemView;
+@synthesize consoleView;
+@synthesize crashesView;
+@synthesize scriptView;
+@synthesize preferencesView;
+@synthesize exceptionView;
+@synthesize indicator;
+@synthesize indicatorDetail;
+@synthesize cancelButton;
+@synthesize sendButton;
+
 #pragma mark Construction
 
 - (id) init
@@ -420,6 +447,8 @@
     // NSLog(@"Upload started");
 
     [indicator setHidden:NO];
+    [indicatorDetail setHidden:NO];
+    [indicatorDetail setStringValue:@"Sending feedback..."];
     [indicator startAnimation:self];
 
     [messageView setEditable:NO];
@@ -432,6 +461,8 @@
 
     [indicator stopAnimation:self];
     [indicator setHidden:YES];
+    [indicatorDetail setHidden:YES];
+    [indicatorDetail setStringValue:@"Collecting feedback data..."];
 
     [uploader release], uploader = nil;
 
@@ -455,6 +486,8 @@
 
     [indicator stopAnimation:self];
     [indicator setHidden:YES];
+    [indicatorDetail setHidden:YES];
+    [indicatorDetail setStringValue:@"Collecting feedback data..."];
 
     NSString *response = [uploader response];
 
@@ -550,6 +583,8 @@
 - (void) stopSpinner
 {
     [indicator stopAnimation:self];
+    [indicatorDetail setHidden:YES];
+    [indicatorDetail setStringValue:@"Collecting feedback data..."];
     [indicator setHidden:YES];
     [sendButton setEnabled:YES];
 }
@@ -635,6 +670,8 @@
     [detailsButton setIntValue:NO];
 
     [indicator setHidden:NO];
+    [indicatorDetail setHidden:NO];
+    [indicatorDetail setStringValue:@"Collecting feedback data..."];
     [indicator startAnimation:self];
     [sendButton setEnabled:NO];
 
@@ -668,6 +705,11 @@
 
     [NSThread detachNewThreadSelector:@selector(populate) toTarget:self withObject:nil];
 
+    [NSApp activateIgnoringOtherApps:YES];
+	[self.window makeKeyAndOrderFront:self];
+    [self.window setLevel:NSFloatingWindowLevel];
+    [self.window setCollectionBehavior:NSWindowCollectionBehaviorCanJoinAllSpaces];
+    
     [super showWindow:sender];
 }
 

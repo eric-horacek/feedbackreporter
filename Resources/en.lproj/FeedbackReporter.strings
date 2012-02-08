@@ -11,7 +11,7 @@
 "Cancel" = "Cancel";
 
 /* Comments text view label */
-"Comments:" = "What you did just before the problem occurred:";
+"Comments:" = "What you were doing when the problem occurred:";
 
 /* */
 "Console" = "Console";
@@ -23,7 +23,7 @@
 "Details" = "Details";
 
 /* */
-"Email address:" = "Your email address if you would like us to get in touch with you:";
+"Email address:" = "Your email address:";
 
 /* */
 "Error: %@" = "Error: %@";
@@ -41,7 +41,7 @@
 "Feedback Host Not Reachable" = "Feedback Host Not Reachable";
 
 /* Feedback message text */
-"Got a problem with %@?" = "Got an idea how to improve %@?";
+"Got a problem with %@?" = "Send feedback to to developers of %@";
 
 /* */
 "OK" = "OK";
@@ -59,16 +59,16 @@
 "Send" = "Send";
 
 /* Informative text for crash report */
-"Send crash report" = "To help us fix the problem, please send us this feedback report. Click Details to see what information is sent to us.";
+"Send crash report" = "Looks like you've encountered a bug! To help us fix the problem, please send a feedback report. Click Details to see what information is included.";
 
 /* */
 "Send details" = "Send details";
 
 /* Informative text for feedback */
-"Send feedback" = "To help us improve our software your feedback is highly welcome! Click Details to see what information is sent to us.";
+"Send feedback" = "Thanks for taking the time to contact us. Your feedback is important to us - we'll try to get back to you as soon as possible. Click Details to see what information is sent to us.";
 
 /* */
-"Sorry, failed to submit your feedback to the server." = "Error submitting your feedback to the server.";
+"Sorry, failed to submit your feedback to the server." = "There's been an error submitting your feedback to the server.";
 
 /* */
 "System" = "System";

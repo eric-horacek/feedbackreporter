@@ -60,10 +60,10 @@
     IBOutlet NSTextView *exceptionView;
 
     IBOutlet NSProgressIndicator *indicator;
+    IBOutlet NSTextField *indicatorDetail;
 
     IBOutlet NSButton *cancelButton;
     IBOutlet NSButton *sendButton;
-		
     
     FRUploader *uploader;
     
@@ -71,6 +71,33 @@
     
     NSString *type;
 }
+
+@property (nonatomic, assign)IBOutlet  NSTextField*headingField;
+@property (nonatomic, assign)IBOutlet  NSTextField*subheadingField;
+@property (nonatomic, assign)IBOutlet  NSTextField*messageLabel;
+@property (nonatomic, assign)IBOutlet  NSTextView*messageView;
+@property (nonatomic, assign)IBOutlet  NSTextField*emailLabel;
+@property (nonatomic, assign)IBOutlet  NSComboBox*emailBox;
+@property (nonatomic, assign)IBOutlet  NSButton*detailsButton;
+@property (nonatomic, assign)IBOutlet  NSTextField*detailsLabel;
+@property (nonatomic, assign)IBOutlet  NSButton*sendDetailsCheckbox;
+@property (nonatomic, assign)IBOutlet  NSTabView*tabView;
+@property (nonatomic, assign)IBOutlet  NSTabViewItem*tabSystem;
+@property (nonatomic, assign)IBOutlet  NSTabViewItem*tabConsole;
+@property (nonatomic, assign)IBOutlet  NSTabViewItem*tabCrash;
+@property (nonatomic, assign)IBOutlet  NSTabViewItem*tabScript;
+@property (nonatomic, assign)IBOutlet  NSTabViewItem*tabPreferences;
+@property (nonatomic, assign)IBOutlet  NSTabViewItem*tabException;
+@property (nonatomic, assign)IBOutlet  NSTableView*systemView;
+@property (nonatomic, assign)IBOutlet  NSTextView*consoleView;
+@property (nonatomic, assign)IBOutlet  NSTextView*crashesView;
+@property (nonatomic, assign)IBOutlet  NSTextView*scriptView;
+@property (nonatomic, assign)IBOutlet  NSTextView*preferencesView;
+@property (nonatomic, assign)IBOutlet  NSTextView*exceptionView;
+@property (nonatomic, assign)IBOutlet  NSProgressIndicator*indicator;
+@property (nonatomic, assign)IBOutlet  NSTextField*indicatorDetail;
+@property (nonatomic, assign)IBOutlet  NSButton*cancelButton;
+@property (nonatomic, assign)IBOutlet  NSButton*sendButton;
 
 #pragma mark Accessors
 
